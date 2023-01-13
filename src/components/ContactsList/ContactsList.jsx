@@ -2,6 +2,7 @@ import {
   Contacts,
   ContactsItem,
   ContactsItemName,
+  ContactsItemNumber,
 } from './ContactsList.styled';
 
 const ContactsList = ({ contacts }) => {
@@ -11,7 +12,7 @@ const ContactsList = ({ contacts }) => {
         return (
           <ContactsItem key={contact.id}>
             <ContactsItemName>{contact.name}:</ContactsItemName>
-            <span> {contact.number}</span>
+            <ContactsItemNumber> {contact.number}</ContactsItemNumber>
           </ContactsItem>
         );
       })}

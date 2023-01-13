@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, ContactsListTitle } from './App.styled';
+import { Container, ContactsListTitle, PhonebookTitle } from './App.styled';
 import ContactForm from 'components/AddContacts';
 import ContactsList from 'components/ContactsList';
 
@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <PhonebookTitle>Phonebook</PhonebookTitle>
         <ContactForm setContact={this.getNewContact} />
         <ContactsListTitle>Contacts</ContactsListTitle>
         <ContactsList contacts={this.state.contacts} />

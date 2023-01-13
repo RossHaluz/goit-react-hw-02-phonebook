@@ -8,6 +8,10 @@ export const Container = styled.div`
   padding: 30px;
 `;
 
+export const PhonebookTitle = styled.h1`
+  font-size: 28px;
+`;
+
 export const ContactsListTitle = styled.h2`
   margin-bottom: 10px;
 `;
