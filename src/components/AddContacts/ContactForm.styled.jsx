@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const FormContact = styled.form`
   border: 1px solid black;
+  border-radius: 5px;
   width: 250px;
   padding: 20px;
   display: flex;
@@ -29,4 +30,5 @@ export const FormButton = styled.button`
   border: 1px solid gray;
   border-radius: 5px;
   margin-top: 5px;
+  font-size: 14px;
 `;
