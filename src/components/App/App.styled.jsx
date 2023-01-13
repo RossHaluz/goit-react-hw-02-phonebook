@@ -7,3 +7,7 @@ export const Container = styled.div`
   color: #010101;
   padding: 30px;
 `;
+
+export const ContactsListTitle = styled.h2`
+  margin-bottom: 10px;
+`;
