@@ -13,7 +13,8 @@ class ContactForm extends Component {
   };
 
   onChangeInput = e => {
-    this.setState({ name: e.currentTarget.value });
+    const { name, value } = e.currentTarget;
+    this.setState({ [name]: value });
   };
 
   onSubmitForm = e => {
@@ -42,6 +43,8 @@ class ContactForm extends Component {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
+          value={this.state.number}
+          onChange={this.onChangeInput}
         />
 
         <FormButton type="submit">Add contact</FormButton>
