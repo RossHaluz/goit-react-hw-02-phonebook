@@ -26,9 +26,11 @@ export const FormInput = styled.input`
 export const FormButton = styled.button`
   width: 100px;
   padding: 5px;
-  background-color: lightgrey;
+  background-color: #35363a;
   border: 1px solid gray;
   border-radius: 5px;
   margin-top: 5px;
   font-size: 14px;
+  color: white;
+  cursor: pointer;
 `;
