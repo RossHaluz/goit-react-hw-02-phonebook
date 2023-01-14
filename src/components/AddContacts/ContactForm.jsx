@@ -10,7 +10,7 @@ import {
 
 let schema = yup.object().shape({
   name: yup.string().required(),
-  number: yup.number().min(10).max(12).required(),
+  number: yup.number().required(),
 });
 
 const ContactForm = ({ setContact }) => {
