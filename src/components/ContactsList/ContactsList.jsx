@@ -3,6 +3,7 @@ import {
   ContactsItem,
   ContactsItemName,
   ContactsItemNumber,
+  ContactBtnDelete,
 } from './ContactsList.styled';
 
 const ContactsList = ({ contacts, onDeleteContact }) => {
@@ -13,9 +14,9 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
           <ContactsItem key={id}>
             <ContactsItemName>{name}:</ContactsItemName>
             <ContactsItemNumber> {number}</ContactsItemNumber>
-            <button type="button" onClick={() => onDeleteContact(id)}>
+            <ContactBtnDelete type="button" onClick={() => onDeleteContact(id)}>
               Delete
-            </button>
+            </ContactBtnDelete>
           </ContactsItem>
         );
       })}
