@@ -29,11 +29,18 @@ class App extends Component {
     this.setState({ filter: value });
   };
 
-  render() {
-    const { contacts, filter } = this.state;
-    const visibleTodo = contacts.filter(contact =>
-      contact.name.includes(filter)
+  getFilterContacts = () => {
+    const { filter, contacts } = this.state;
+
+    const normilize = filter.toLocaleLowerCase();
+    return contacts.filter(contact =>
+      contact.name.toLocaleLowerCase().includes(normilize)
     );
+  };
+
+  render() {
+    const { filter } = this.state;
+    const visibleContacts = this.getFilterContacts();
 
     return (
       <Container>
@@ -45,7 +52,7 @@ class App extends Component {
           inputValue={filter}
           changeFilterValue={this.onChancheInputFilter}
         />
-        <ContactsList contacts={visibleTodo} />
+        <ContactsList contacts={visibleContacts} />
       </Container>
     );
   }

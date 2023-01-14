@@ -21,6 +21,7 @@ class ContactForm extends Component {
     e.preventDefault();
 
     this.props.setContact(this.state);
+    this.setState({ name: '', number: '' });
   };
 
   render() {

@@ -6,6 +6,7 @@ export const Contacts = styled.ul`
 
 export const ContactsItem = styled.li`
   font-size: 18px;
+  padding: 5px;
 `;
 
 export const ContactsItemName = styled.span`
