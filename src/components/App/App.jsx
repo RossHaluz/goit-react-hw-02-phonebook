@@ -18,6 +18,15 @@ class App extends Component {
       number: number,
     };
 
+    const findContact = this.state.contacts.find(
+      user => user.name === contact.name
+    );
+
+    if (findContact) {
+      alert(`${contact.name} is already in contacts!`);
+      return;
+    }
+
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts],
     }));
