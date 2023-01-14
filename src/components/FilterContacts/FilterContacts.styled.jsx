@@ -6,4 +6,5 @@ export const InputFilter = styled.input`
   border-radius: 10px;
   font-size: 13px;
   margin-bottom: 15px;
+  border: 1px solid gray;
 `;
