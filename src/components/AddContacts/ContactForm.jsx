@@ -33,11 +33,11 @@ const ContactForm = ({ setContact }) => {
       <FormContact>
         <FormLable htmlFor="">Name</FormLable>
         <FormInput type="text" name="name" />
-        <ErrorMessage component="div" name="name" />
+        <ErrorMessage component="p" name="name" />
 
         <FormLable htmlFor="">Number</FormLable>
         <FormInput type="tel" name="number" />
-        <ErrorMessage component="div" name="number" />
+        <ErrorMessage component="p" name="number" />
 
         <FormButton type="submit">Add contact</FormButton>
       </FormContact>
