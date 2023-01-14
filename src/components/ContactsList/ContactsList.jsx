@@ -5,14 +5,17 @@ import {
   ContactsItemNumber,
 } from './ContactsList.styled';
 
-const ContactsList = ({ contacts }) => {
+const ContactsList = ({ contacts, onDeleteContact }) => {
   return (
     <Contacts>
-      {contacts.map(contact => {
+      {contacts.map(({ id, name, number }) => {
         return (
-          <ContactsItem key={contact.id}>
-            <ContactsItemName>{contact.name}:</ContactsItemName>
-            <ContactsItemNumber> {contact.number}</ContactsItemNumber>
+          <ContactsItem key={id}>
+            <ContactsItemName>{name}:</ContactsItemName>
+            <ContactsItemNumber> {number}</ContactsItemNumber>
+            <button type="button" onClick={() => onDeleteContact(id)}>
+              Delete
+            </button>
           </ContactsItem>
         );
       })}
