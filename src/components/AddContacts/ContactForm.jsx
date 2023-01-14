@@ -6,6 +6,7 @@ import {
   FormLable,
   FormInput,
   FormButton,
+  Error,
 } from './ContactForm.styled';
 
 let schema = yup.object().shape({
@@ -33,11 +34,11 @@ const ContactForm = ({ setContact }) => {
       <FormContact>
         <FormLable htmlFor="">Name</FormLable>
         <FormInput type="text" name="name" />
-        <ErrorMessage component="p" name="name" />
+        <Error component="p" name="name" />
 
         <FormLable htmlFor="">Number</FormLable>
         <FormInput type="tel" name="number" />
-        <ErrorMessage component="p" name="number" />
+        <Error component="p" name="number" />
 
         <FormButton type="submit">Add contact</FormButton>
       </FormContact>
